@@ -1,0 +1,21 @@
+if t_repayment.PARNTER_CODE is not null
+{
+	if clear_flag=0
+		AMOUNT_PAY*出资比例
+	else
+	{	( t_instalment.value_instalment_ratio) 
+		where t_instalment .id_instalment=id_instalment of current t_repayment}
+		-{sum(AMOUNT_PAY_bank)
+			where creation_time<creation time of of current t_repayment And id_instalment of of current t_repayment =t_repayment.id_instalment}
+}
+else
+0
+event processor
+report Step 4:
+
+As a report
+
+I want to process mid_result, then store the report in FTP server.
+
+So that
+Flying Jiang (CN) <Flying.Jiang@homecredit.cn>
